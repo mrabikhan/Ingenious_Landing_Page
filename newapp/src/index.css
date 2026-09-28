@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0A0A0B;
+
+  --color-gold-50: #FFF9EC;
+  --color-gold-100: #FEF0CE;
+  --color-gold-200: #FCE3A0;
+  --color-gold-300: #FBD672;
+  --color-gold-400: #F7C948;
+  --color-gold-500: #F5A623;
+  --color-gold-600: #F2861A;
+  --color-gold-700: #E8720C;
+
+  --animate-gradient-x: gradient-x 6s ease infinite;
+  --animate-spin-slow: spin-slow 40s linear infinite;
+  --animate-bounce-slow: bounce-slow 2s ease-in-out infinite;
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-fade-up: fade-up 0.5s ease both;
+  --animate-flow-dot: flow-dot 1.8s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes flow-dot {
+  0% { left: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
